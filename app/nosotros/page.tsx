@@ -1,12 +1,9 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
 
-import { CtaButton } from "@/components/cta-button";
 import { Reveal } from "@/components/reveal";
 import { SectionHeading } from "@/components/section-heading";
-import { brand } from "@/lib/brand";
-import { instagramCards, storyPoints, values } from "@/lib/site";
+import { aboutGallery, storyPoints, values } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Nosotros",
@@ -82,17 +79,14 @@ export default function AboutPage() {
 
       <section className="mx-auto max-w-7xl space-y-8">
         <SectionHeading
-          eyebrow="Galería"
-          title="El mood de la marca se vive entre vitrina, calle y comunidad."
-          description="Mientras el Instagram se mantiene como canal vivo del día a día, esta selección resume la energía visual que queremos proyectar."
+          eyebrow="Fotos"
+          title="El local y la energía visual que sostiene la marca."
+          description="Una mirada simple al ambiente de tienda y a la cultura rider que inspira a JC BikerStore."
         />
-        <div className="grid gap-4 md:grid-cols-3">
-          {instagramCards.map((item) => (
+        <div className="grid gap-4 md:grid-cols-2">
+          {aboutGallery.map((item) => (
             <Reveal key={item.title}>
-              <Link
-                href={brand.instagramUrl}
-                className="group block cursor-pointer overflow-hidden rounded-[1.8rem] border border-white/10 bg-white/[0.03]"
-              >
+              <article className="group overflow-hidden rounded-[1.8rem] border border-white/10 bg-white/[0.03]">
                 <div className="relative aspect-[4/5] overflow-hidden">
                   <Image
                     src={item.image}
@@ -108,24 +102,10 @@ export default function AboutPage() {
                   </h3>
                   <p className="text-sm leading-6 text-white/62">{item.description}</p>
                 </div>
-              </Link>
+              </article>
             </Reveal>
           ))}
         </div>
-      </section>
-
-      <section className="mx-auto max-w-7xl rounded-[2rem] border border-white/10 bg-gradient-to-r from-brand-orange/20 to-transparent p-8 shadow-panel">
-        <Reveal className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
-          <div className="space-y-3">
-            <p className="text-sm uppercase tracking-[0.28em] text-brand-ember">
-              Comunidad rider
-            </p>
-            <h2 className="font-display text-5xl uppercase leading-[0.9] text-white">
-              Si ruedas en Santo Domingo, este punto es para ti.
-            </h2>
-          </div>
-          <CtaButton href={brand.instagramUrl}>Seguir en Instagram</CtaButton>
-        </Reveal>
       </section>
     </div>
   );

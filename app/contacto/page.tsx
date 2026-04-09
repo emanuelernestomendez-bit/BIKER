@@ -5,7 +5,7 @@ import { ContactForm } from "@/components/contact-form";
 import { Reveal } from "@/components/reveal";
 import { SectionHeading } from "@/components/section-heading";
 import { brand, buildWhatsAppUrl } from "@/lib/brand";
-import { contactHighlights, faqs } from "@/lib/site";
+import { contactHighlights } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Contacto",
@@ -28,7 +28,7 @@ export default function ContactPage() {
 
       <section className="mx-auto grid max-w-7xl gap-6 lg:grid-cols-[0.95fr_1.05fr]">
         <Reveal className="space-y-6">
-          <div className="grid gap-4 sm:grid-cols-3 lg:grid-cols-1">
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-1">
             {contactHighlights.map((item) => (
               <Link
                 key={item.title}
@@ -81,18 +81,35 @@ export default function ContactPage() {
           </div>
           <div className="space-y-5 p-8">
             <p className="text-sm uppercase tracking-[0.26em] text-brand-ember">
-              Preguntas rápidas
+              Encuéntranos
             </p>
-            {faqs.map((item) => (
-              <div key={item.question} className="rounded-[1.4rem] border border-white/10 bg-black/30 p-5">
-                <h3 className="font-display text-3xl uppercase leading-none tracking-[0.08em] text-white">
-                  {item.question}
-                </h3>
-                <p className="mt-3 text-base leading-7 text-white/65">
-                  {item.answer}
-                </p>
-              </div>
-            ))}
+            <div className="rounded-[1.4rem] border border-white/10 bg-black/30 p-5">
+              <h3 className="font-display text-3xl uppercase leading-none tracking-[0.08em] text-white">
+                Dirección
+              </h3>
+              <p className="mt-3 text-base leading-7 text-white/65">
+                {brand.city}
+              </p>
+            </div>
+            <div className="rounded-[1.4rem] border border-white/10 bg-black/30 p-5">
+              <h3 className="font-display text-3xl uppercase leading-none tracking-[0.08em] text-white">
+                Horario
+              </h3>
+              <p className="mt-3 text-base leading-7 text-white/65">
+                {brand.scheduleLabel}
+              </p>
+            </div>
+            <div className="rounded-[1.4rem] border border-white/10 bg-black/30 p-5">
+              <h3 className="font-display text-3xl uppercase leading-none tracking-[0.08em] text-white">
+                WhatsApp directo
+              </h3>
+              <Link
+                href={brand.whatsappUrl}
+                className="mt-3 inline-flex text-base leading-7 text-white/65 transition hover:text-brand-ember"
+              >
+                {brand.phoneDisplay}
+              </Link>
+            </div>
           </div>
         </div>
       </section>

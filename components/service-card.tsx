@@ -4,7 +4,8 @@ import type { LucideIcon } from "lucide-react";
 type ServiceCardProps = {
   title: string;
   description: string;
-  details: string;
+  price: string;
+  availability: string;
   icon: LucideIcon;
   cta: string;
 };
@@ -12,7 +13,8 @@ type ServiceCardProps = {
 export function ServiceCard({
   title,
   description,
-  details,
+  price,
+  availability,
   icon: Icon,
   cta
 }: ServiceCardProps) {
@@ -28,9 +30,14 @@ export function ServiceCard({
             {title}
           </h3>
           <p className="text-base leading-7 text-white/68">{description}</p>
-          <p className="text-sm uppercase tracking-[0.18em] text-white/46">
-            {details}
-          </p>
+        </div>
+        <div className="flex flex-wrap gap-3">
+          <span className="rounded-full border border-brand-orange/40 bg-brand-orange/12 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.2em] text-brand-ember">
+            {availability}
+          </span>
+          <span className="rounded-full border border-white/10 bg-black/35 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.2em] text-white/74">
+            {price}
+          </span>
         </div>
         <Link
           href={cta}

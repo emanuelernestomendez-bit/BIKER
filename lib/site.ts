@@ -1,11 +1,10 @@
 import {
-  Bike,
-  CircleDot,
-  HandMetal,
+  HandMetal as HandMetalIcon,
   HardHat,
-  MapPinned,
+  MessageCircle,
   Radio,
   ShieldCheck,
+  UserRound,
   Wrench
 } from "lucide-react";
 
@@ -15,190 +14,226 @@ export const navigation = [
   { href: "/", label: "Inicio" },
   { href: "/servicios", label: "Servicios" },
   { href: "/catalogo", label: "Catálogo" },
-  { href: "/nosotros", label: "Nosotros" },
-  { href: "/contacto", label: "Contacto" }
+  { href: "/contacto", label: "Contacto" },
+  { href: "/nosotros", label: "Nosotros" }
 ];
 
-export const heroStats = [
-  { label: "Ciudad", value: "Santo Domingo, RD" },
-  { label: "Horario", value: "L-S / 10AM - 7PM" },
-  { label: "Instagram", value: "@jc_bikerstore_rd" }
-];
-
-export const serviceCategories = [
+export const homeGateway = [
   {
-    title: "Motos",
-    description: "Modelos urbanos y de trabajo listos para rodar.",
-    href: "/catalogo?categoria=Motos",
-    icon: Bike
+    title: "Servicios",
+    description: "Todo lo que resolvemos para tu moto.",
+    href: "/servicios",
+    image: "/images/catalogo-ig-2026/jcbikerstore_producto_08_rodillera-scoyco-negra.png",
+    icon: ShieldCheck
   },
   {
-    title: "Cascos",
-    description: "Protección con ajuste, ventilación y presencia premium.",
-    href: "/catalogo?categoria=Cascos",
+    title: "Catálogo",
+    description: "Explora productos reales del inventario actual.",
+    href: "/catalogo",
+    image: "/images/catalogo-ig-2026/jcbikerstore_producto_01_cascos-mt.png",
     icon: HardHat
   },
   {
-    title: "Guantes",
-    description: "Grip, confort y seguridad para el ritmo diario.",
-    href: "/catalogo?categoria=Guantes",
-    icon: HandMetal
+    title: "Contacto",
+    description: "Ubicación, horarios y formulario directo.",
+    href: "/contacto",
+    image: "/images/about-store.png",
+    icon: MessageCircle
   },
   {
-    title: "Repuestos",
-    description: "Piezas clave para mantener tu moto fina y confiable.",
-    href: "/catalogo?categoria=Repuestos",
-    icon: Wrench
-  },
-  {
-    title: "Accesorios",
-    description: "Detalles que suben tu setup y tu comodidad.",
-    href: "/catalogo?categoria=Accesorios",
-    icon: Radio
-  },
-  {
-    title: "Equipamiento",
-    description: "Chaquetas, protección y extras para rider serio.",
-    href: "/catalogo?categoria=Ropa",
-    icon: ShieldCheck
-  }
-];
-
-export const services = [
-  {
-    title: "Venta de motocicletas",
-    description:
-      "Opciones pensadas para ciudad, trabajo y riders que buscan presencia y rendimiento.",
-    details: "Asesoría directa para elegir la moto correcta según tu uso.",
-    icon: Bike,
-    cta: buildWhatsAppUrl(
-      "Hola JC BikerStore, quiero información sobre las motocicletas disponibles."
-    )
-  },
-  {
-    title: "Accesorios para rider",
-    description:
-      "Intercoms, soportes, luces, maleteros y piezas para personalizar tu máquina.",
-    details: "Montamos una selección funcional, visual y lista para el día a día.",
-    icon: Radio,
-    cta: buildWhatsAppUrl(
-      "Hola JC BikerStore, quiero consultar accesorios para mi moto."
-    )
-  },
-  {
-    title: "Repuestos y mantenimiento básico",
-    description:
-      "Consumibles y piezas de recambio para mantener la moto confiable en calle.",
-    details: "Te ayudamos a ubicar la referencia correcta sin perder tiempo.",
-    icon: Wrench,
-    cta: buildWhatsAppUrl(
-      "Hola JC BikerStore, necesito repuestos para mi moto."
-    )
-  },
-  {
-    title: "Equipos de seguridad",
-    description:
-      "Cascos, guantes, protectores y equipo esencial para rodar con criterio.",
-    details: "Protección que se siente bien y luce al nivel de tu moto.",
-    icon: ShieldCheck,
-    cta: buildWhatsAppUrl(
-      "Hola JC BikerStore, quiero cotizar equipos de seguridad."
-    )
+    title: "Quiénes Somos",
+    description: "Historia, misión y esencia de la tienda.",
+    href: "/nosotros",
+    image: "/images/hero-rider.png",
+    icon: UserRound
   }
 ];
 
 export const products = [
   {
-    name: "Casco Torque Street",
+    name: "Casco MT Full Face",
     category: "Cascos",
-    description: "Diseño agresivo, visor amplio y ventilación urbana.",
-    image: "/images/catalog-helmet.png",
-    accent: "Protección premium"
+    description: "Acabado negro mate con acentos naranjas y presencia deportiva.",
+    serviceDescription:
+      "Casco MT full-face para riders que quieren protección, presencia y look deportivo en calle.",
+    image: "/images/catalogo-ig-2026/jcbikerstore_producto_01_cascos-mt.png",
+    availability: "Disponible",
+    price: "RD$8,800",
+    accent: "MT",
+    icon: HardHat,
+    cta: buildWhatsAppUrl(
+      "Hola JC BikerStore, quiero consultar el casco MT Full Face."
+    )
   },
   {
-    name: "Guantes Grip Control",
-    category: "Guantes",
-    description: "Refuerzos táctiles y palma firme para uso diario.",
-    image: "/images/catalog-gloves.png",
-    accent: "Rider diario"
+    name: "Pasa Montaña con Filtro",
+    category: "Protección",
+    description: "Balaclava negra con filtro integrado para uso diario rider.",
+    serviceDescription:
+      "Protección ligera para rodar con más comodidad, filtro frontal y ajuste limpio al rostro.",
+    image: "/images/catalogo-ig-2026/jcbikerstore_producto_02_pasa-montana.png",
+    availability: "Disponible",
+    price: "RD$400",
+    accent: "Filtro integrado",
+    icon: ShieldCheck,
+    cta: buildWhatsAppUrl(
+      "Hola JC BikerStore, quiero consultar el pasa montaña con filtro."
+    )
   },
   {
-    name: "Kit de transmisión Pro Chain",
+    name: "Estribos Universal Negro",
     category: "Repuestos",
-    description: "Respuesta sólida y desgaste optimizado para uso frecuente.",
-    image: "/images/catalog-parts.png",
-    accent: "Listo para trabajo"
+    description: "Par en metal negro con look técnico y grip marcado.",
+    serviceDescription:
+      "Estribos universales negros con presencia agresiva y apoyo firme para uso diario.",
+    image: "/images/catalogo-ig-2026/jcbikerstore_producto_03_estribos-universal-negro.png",
+    availability: "Disponible",
+    price: "RD$1,050",
+    accent: "Par universal",
+    icon: Wrench,
+    cta: buildWhatsAppUrl(
+      "Hola JC BikerStore, quiero consultar los estribos universal negro."
+    )
   },
   {
-    name: "Soporte móvil Road Lock",
+    name: "Piernera Impermeable Negra",
     category: "Accesorios",
-    description: "Fijación firme y lectura rápida de ruta o entregas.",
-    image: "/images/catalog-accessories.png",
-    accent: "Setup limpio"
+    description: "Bolso de pierna impermeable para setup urbano y funcional.",
+    serviceDescription:
+      "Piernera impermeable negra para llevar lo esencial con seguridad y acceso rápido.",
+    image: "/images/catalogo-ig-2026/jcbikerstore_producto_04_piernera-impermeable-negra.png",
+    availability: "Disponible",
+    price: "RD$1,350",
+    accent: "Impermeable",
+    icon: HandMetalIcon,
+    cta: buildWhatsAppUrl(
+      "Hola JC BikerStore, quiero consultar la piernera impermeable negra."
+    )
   },
   {
-    name: "Chaqueta Night Run",
-    category: "Ropa",
-    description: "Corte técnico, paneles ventilados y actitud de calle.",
-    image: "/images/catalog-gear.png",
-    accent: "Estilo + seguridad"
+    name: "Direccionales Universal",
+    category: "Direccionales",
+    description: "Par de direccionales universales con lente ámbar y cuerpo negro.",
+    serviceDescription:
+      "Direccionales universales en varios modelos para resolver iluminación y presencia visual.",
+    image: "/images/catalogo-ig-2026/jcbikerstore_producto_05_direccionales-universal.png",
+    availability: "Disponible",
+    price: "RD$750 - RD$900",
+    accent: "Varios modelos",
+    icon: Radio,
+    cta: buildWhatsAppUrl(
+      "Hola JC BikerStore, quiero consultar las direccionales universal."
+    )
   },
   {
-    name: "Moto Urban Force 150",
-    category: "Motos",
-    description: "Ágil para Santo Domingo y lista para la jornada completa.",
-    image: "/images/catalog-moto.png",
-    accent: "Movilidad inteligente"
+    name: "Base para Teléfono / GPS",
+    category: "Soportes",
+    description: "Base negra para manillar con look robusto y limpio.",
+    serviceDescription:
+      "Base para teléfono o GPS con agarre firme para trayectos urbanos y uso diario.",
+    image: "/images/catalogo-ig-2026/jcbikerstore_producto_06_base-telefono-gps.png",
+    availability: "Disponible",
+    price: "RD$650",
+    accent: "Holder base",
+    icon: Radio,
+    cta: buildWhatsAppUrl(
+      "Hola JC BikerStore, quiero consultar la base para teléfono o GPS."
+    )
   },
   {
-    name: "Casco Rapid Visor",
-    category: "Cascos",
-    description: "Perfil compacto con sello visual deportivo.",
-    image: "/images/catalog-helmet.png",
-    accent: "Visión amplia"
+    name: "Protector de Goma Palanca de Cambio",
+    category: "Repuestos",
+    description: "Protector compacto de goma con textura marcada y look técnico.",
+    serviceDescription:
+      "Protector de goma para palanca de cambio, pequeño pero útil para cuidar el calzado y mejorar el tacto.",
+    image: "/images/catalogo-ig-2026/jcbikerstore_producto_07_protector-goma-palanca-cambio.png",
+    availability: "Disponible",
+    price: "RD$350",
+    accent: "Detalle esencial",
+    icon: Wrench,
+    cta: buildWhatsAppUrl(
+      "Hola JC BikerStore, quiero consultar el protector de goma para palanca de cambio."
+    )
   },
   {
-    name: "Slider Protection Set",
-    category: "Accesorios",
-    description: "Protección funcional para el uso diario y la ciudad.",
-    image: "/images/catalog-accessories.png",
-    accent: "Más confianza"
+    name: "Rodillera Scoyco Negra",
+    category: "Protección",
+    description: "Protección articulada negra con presencia premium y ajuste firme.",
+    serviceDescription:
+      "Rodillera Scoyco negra con carcasa articulada y perfil premium para riders que priorizan protección.",
+    image: "/images/catalogo-ig-2026/jcbikerstore_producto_08_rodillera-scoyco-negra.png",
+    availability: "Disponible",
+    price: "RD$3,500",
+    accent: "Scoyco",
+    icon: ShieldCheck,
+    cta: buildWhatsAppUrl(
+      "Hola JC BikerStore, quiero consultar la rodillera Scoyco negra."
+    )
   },
   {
-    name: "Guantes Asphalt Mesh",
-    category: "Guantes",
-    description: "Respirables y precisos para recorridos largos en calor.",
-    image: "/images/catalog-gloves.png",
-    accent: "Confort en ruta"
+    name: "Mofletas",
+    category: "Repuestos",
+    description: "Par de cubiertas negras para mofler con acabado limpio y agresivo.",
+    serviceDescription:
+      "Mofletas en negro con presencia fuerte para mejorar el look del escape y cerrar el setup.",
+    image: "/images/catalogo-ig-2026/jcbikerstore_producto_09_mofletas.png",
+    availability: "Disponible",
+    price: "RD$3,800",
+    accent: "Par disponible",
+    icon: Wrench,
+    cta: buildWhatsAppUrl(
+      "Hola JC BikerStore, quiero consultar las mofletas."
+    )
+  },
+  {
+    name: "Protectores de Puños con Luces",
+    category: "Direccionales",
+    description: "Guardas con luz direccional integrada en versiones blanca y roja.",
+    serviceDescription:
+      "Protectores de puños con luces direccionales integradas, disponibles en blanco y rojo.",
+    image: "/images/catalogo-ig-2026/jcbikerstore_producto_10_protectores-punos-luces-direccionales.png",
+    availability: "Disponible",
+    price: "RD$1,500",
+    accent: "Blanco / rojo",
+    icon: Radio,
+    cta: buildWhatsAppUrl(
+      "Hola JC BikerStore, quiero consultar los protectores de puños con luces direccionales."
+    )
+  },
+  {
+    name: "Soporte de Teléfono / GPS",
+    category: "Soportes",
+    description: "Holder completo con cradle visible para rutas y entregas.",
+    serviceDescription:
+      "Soporte completo para teléfono o GPS con agarre visible y opción de envío disponible.",
+    image: "/images/catalogo-ig-2026/jcbikerstore_producto_11_soporte-telefono-gps-envios.png",
+    availability: "Disponible con envíos",
+    price: "RD$650",
+    accent: "Con envíos",
+    icon: Radio,
+    cta: buildWhatsAppUrl(
+      "Hola JC BikerStore, quiero consultar el soporte de teléfono o GPS con envío."
+    )
   }
 ];
+
+export const services = products.map((product) => ({
+  title: product.name,
+  description: product.serviceDescription,
+  price: product.price,
+  availability: product.availability,
+  icon: product.icon,
+  cta: product.cta
+}));
 
 export const productCategories = [
   "Todos",
-  "Motos",
   "Cascos",
-  "Guantes",
+  "Protección",
   "Repuestos",
-  "Accesorios",
-  "Ropa"
-];
-
-export const instagramCards = [
-  {
-    title: "Nuevos ingresos",
-    description: "Revisa drops, combos y lo último que llegó al piso.",
-    image: "/images/about-store.png"
-  },
-  {
-    title: "Vida rider",
-    description: "La energía de la calle, la comunidad y el equipamiento correcto.",
-    image: "/images/hero-rider.png"
-  },
-  {
-    title: "Setup y detalle",
-    description: "Accesorios y repuestos con presencia y utilidad real.",
-    image: "/images/catalog-accessories.png"
-  }
+  "Direccionales",
+  "Soportes",
+  "Accesorios"
 ];
 
 export const values = [
@@ -222,31 +257,31 @@ export const values = [
 
 export const storyPoints = [
   "Nacimos en Santo Domingo para atender a riders que necesitan resolver rápido y bien.",
-  "Nuestra propuesta mezcla motos, accesorios, repuestos y protección en un mismo punto.",
-  "Cada consulta busca una recomendación honesta, útil y ajustada al uso real del cliente."
+  "La tienda reúne cascos, accesorios, repuestos y protección en un mismo punto.",
+  "Cada consulta busca una recomendación útil, realista y alineada al uso del cliente."
 ];
 
-export const faqs = [
+export const aboutGallery = [
   {
-    question: "¿Puedo consultar disponibilidad por WhatsApp?",
-    answer:
-      "Sí. Todos los CTAs del sitio te llevan directo a WhatsApp para cotizar y confirmar disponibilidad."
+    title: "Local",
+    description: "Ambiente de tienda y selección visual de producto.",
+    image: "/images/about-store.png"
   },
   {
-    question: "¿Trabajan con horarios fijos?",
-    answer:
-      "Sí. Abrimos de lunes a sábado de 10:00 AM a 7:00 PM y domingos permanecemos cerrados."
-  },
-  {
-    question: "¿Dónde están ubicados?",
-    answer:
-      `Estamos en ${brand.city}. En la página de contacto tienes el mapa embebido y el enlace directo a Google Maps.`
+    title: "Comunidad",
+    description: "La energía rider que inspira la marca.",
+    image: "/images/hero-rider.png"
   }
 ];
 
 export const contactHighlights = [
   {
-    title: "WhatsApp directo",
+    title: "Teléfono",
+    value: brand.phoneDisplay,
+    href: `tel:${brand.phoneE164}`
+  },
+  {
+    title: "WhatsApp",
     value: brand.phoneDisplay,
     href: buildWhatsAppUrl(
       "Hola JC BikerStore, quiero hacer una consulta sobre productos y servicios."
@@ -258,7 +293,7 @@ export const contactHighlights = [
     href: brand.instagramUrl
   },
   {
-    title: "Ubicación",
+    title: "Dirección",
     value: brand.city,
     href: brand.mapsUrl
   }
@@ -267,19 +302,19 @@ export const contactHighlights = [
 export const seoKeywords = [
   "JC BikerStore",
   "tienda de motos en Santo Domingo",
-  "cascos para motoristas RD",
+  "cascos MT RD",
   "accesorios para motos República Dominicana",
   "repuestos para motos Santo Domingo",
   "equipos para riders RD"
 ];
 
 export const footerLinks = [
+  { label: "Instagram", href: brand.instagramUrl },
+  { label: "Google Maps", href: brand.mapsUrl },
   {
     label: "WhatsApp",
     href: buildWhatsAppUrl("Hola JC BikerStore, quiero recibir asistencia directa.")
-  },
-  { label: "Instagram", href: brand.instagramUrl },
-  { label: "Google Maps", href: brand.mapsUrl }
+  }
 ];
 
 export const contactFormDefaults = {
@@ -289,26 +324,8 @@ export const contactFormDefaults = {
 };
 
 export const catalogIntro = {
-  eyebrow: "Catálogo orientado a consulta",
-  title: "Productos para rodar, protegerte y mantener tu moto en forma.",
+  eyebrow: "Nuestros productos",
+  title: "Inventario real organizado para consulta rápida.",
   description:
-    "Usa los filtros para explorar categorías y envíanos la referencia por WhatsApp para confirmar precio y disponibilidad."
+    "Filtra por categoría y abre WhatsApp con el producto exacto para confirmar disponibilidad."
 };
-
-export const homeHighlights = [
-  {
-    title: "Horario visible",
-    copy: "Siempre claro para que no pierdas el viaje.",
-    icon: CircleDot
-  },
-  {
-    title: "Atención rápida",
-    copy: "Cotiza directo por WhatsApp sin formularios eternos.",
-    icon: ShieldCheck
-  },
-  {
-    title: "Ubicación precisa",
-    copy: "Santo Domingo, con acceso directo desde Google Maps.",
-    icon: MapPinned
-  }
-];

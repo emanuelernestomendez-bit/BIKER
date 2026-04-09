@@ -1,14 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { buildWhatsAppUrl } from "@/lib/brand";
-
 type ProductCardProps = {
   name: string;
   category: string;
   description: string;
   image: string;
   accent: string;
+  price: string;
+  availability: string;
+  cta: string;
 };
 
 export function ProductCard({
@@ -16,7 +17,10 @@ export function ProductCard({
   category,
   description,
   image,
-  accent
+  accent,
+  price,
+  availability,
+  cta
 }: ProductCardProps) {
   return (
     <article className="group overflow-hidden rounded-[1.8rem] border border-white/10 bg-white/[0.03] shadow-panel transition duration-300 hover:-translate-y-1 hover:border-brand-orange/60">
@@ -44,10 +48,16 @@ export function ProductCard({
           </h3>
           <p className="text-base leading-7 text-white/68">{description}</p>
         </div>
+        <div className="flex flex-wrap gap-3">
+          <span className="rounded-full border border-brand-orange/40 bg-brand-orange/12 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.2em] text-brand-ember">
+            {availability}
+          </span>
+          <span className="rounded-full border border-white/10 bg-black/35 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.2em] text-white/74">
+            {price}
+          </span>
+        </div>
         <Link
-          href={buildWhatsAppUrl(
-            `Hola JC BikerStore, quiero consultar el precio de ${name}.`
-          )}
+          href={cta}
           className="inline-flex cursor-pointer rounded-full border border-brand-orange px-5 py-3 text-xs font-semibold uppercase tracking-[0.22em] text-white transition duration-200 hover:bg-brand-orange"
         >
           Consultar precio

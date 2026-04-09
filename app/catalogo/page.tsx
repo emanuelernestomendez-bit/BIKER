@@ -12,7 +12,7 @@ type CatalogPageProps = {
 export const metadata: Metadata = {
   title: "Catálogo",
   description:
-    "Catálogo de productos de JC BikerStore: motos, cascos, guantes, accesorios, repuestos y ropa rider."
+    "Catálogo de productos reales de JC BikerStore: cascos, protección, repuestos, direccionales, soportes y accesorios."
 };
 
 export default async function CatalogPage({ searchParams }: CatalogPageProps) {
