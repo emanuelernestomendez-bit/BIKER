@@ -219,101 +219,107 @@ export const products = [
 
 export const services = [
   {
-    title: "Venta de accesorios para motocicleta",
+    title: "Accesorios para tu moto",
     includes:
-      "Estribos, soportes para telefono o GPS, protectores de palanca, mofletas, direccionales universales y mas disponibles en tienda.",
+      "Accesorios para mejorar el look, la comodidad y la función de tu moto.",
     forWho:
-      "Para el rider que quiere personalizar o mejorar su moto sin complicarse.",
+      "Para quien quiere resolver varias piezas en una sola visita.",
     benefit:
-      "Encuentras todo en un solo lugar, con asesoria incluida para elegir el accesorio correcto para tu modelo.",
-    price: "Desde RD$350",
-    modalities: ["Atencion en tienda", "Envios disponibles"],
+      "Te ayudamos a llevar la pieza correcta según tu modelo y tu uso.",
+    pricingLabel: "Desde",
+    price: "RD$350",
+    modalities: ["En tienda", "Envíos disponibles"],
     trust:
-      "Asesoria personalizada en tienda. Si no esta en stock, lo conseguimos.",
+      "Si no está en stock, te ayudamos a conseguirlo.",
     icon: Wrench,
-    ctaLabel: "Consultar por WhatsApp",
+    featured: true,
+    ctaLabel: "Consultar accesorios",
     cta: buildWhatsAppUrl(
       "Hola JC BikerStore, quiero consultar accesorios para motocicleta."
-    ),
-    supportLabel: "Ver catalogo",
-    supportHref: "/catalogo"
+    )
   },
   {
-    title: "Venta de equipamiento de proteccion",
+    title: "Protección y equipamiento rider",
     includes:
-      "Cascos MT, rodilleras Scoyco, pierneras impermeables, pasa montanas con filtro y protectores de punos con luces.",
+      "Cascos, protección y equipo pensado para rodar con más seguridad.",
     forWho:
-      "Para el rider que sabe que la seguridad no es opcional.",
+      "Para riders que priorizan seguridad, ajuste y comodidad.",
     benefit:
-      "Accedes a marcas reconocidas y asesoría para elegir talla, ajuste y nivel de proteccion correcto.",
-    price: "Desde RD$400 · Cascos MT desde RD$8,800",
-    modalities: ["Atencion en tienda", "Envios disponibles"],
+      "Sales con equipo que te queda bien y te sirve de verdad en la calle.",
+    pricingLabel: "Desde",
+    price: "RD$400",
+    priceNote: "Cascos MT desde RD$8,800.",
+    modalities: ["En tienda", "Envíos disponibles"],
     trust:
-      "Solo manejamos marcas con estandares de seguridad comprobados.",
+      "Trabajamos marcas reconocidas y te orientamos con talla y nivel de protección.",
     icon: ShieldCheck,
-    ctaLabel: "Consultar disponibilidad por WhatsApp",
+    featured: true,
+    ctaLabel: "Consultar disponibilidad",
     cta: buildWhatsAppUrl(
-      "Hola JC BikerStore, quiero consultar equipamiento de proteccion."
+      "Hola JC BikerStore, quiero consultar equipamiento de protección."
     )
   },
   {
-    title: "Instalacion de accesorios",
+    title: "Instalación de accesorios",
     includes:
-      "Instalacion en tienda de direccionales, estribos, soportes, protectores y otros accesorios adquiridos.",
+      "Instalación en tienda de accesorios comprados aquí o coordinados con nosotros.",
     forWho:
-      "Para quien prefiere no arriesgarse a instalar solo y quiere que quede bien desde el primer intento.",
+      "Para quien quiere que quede bien desde la primera.",
     benefit:
-      "Tu accesorio queda instalado correctamente el mismo dia, sin improvisar ni maltratar la moto.",
-    price: "Cotizacion por WhatsApp segun el accesorio",
+      "Evitas errores de montaje y sales con la moto lista el mismo día.",
+    pricingLabel: "Cotización",
+    price: "Por WhatsApp",
     modalities: ["Solo en tienda", "Santo Domingo"],
-    trust: "Instalacion segura por personal con experiencia.",
+    trust: "Se cotiza según el accesorio y la moto.",
     icon: HardHat,
-    ctaLabel: "Solicitar cotizacion por WhatsApp",
+    ctaLabel: "Solicitar instalación",
     cta: buildWhatsAppUrl(
-      "Hola JC BikerStore, quiero solicitar cotizacion para instalacion de accesorios."
+      "Hola JC BikerStore, quiero solicitar cotización para instalación de accesorios."
     )
   },
   {
-    title: "Asesoria para elegir productos",
+    title: "Asesoría para elegir productos",
     includes:
-      "Orientacion personalizada para elegir casco, accesorio o equipo segun tu moto, tu uso y tu presupuesto.",
+      "Te orientamos según tu moto, tu uso diario y tu presupuesto.",
     forWho:
-      "Para quien tiene dudas, es nuevo en el mundo moto o no sabe que producto se adapta a su modelo.",
+      "Para quien no quiere comprar a ciegas.",
     benefit:
-      "No compras por impulso ni te equivocas de talla o modelo; te ayudamos a decidir bien.",
-    price: "Sin costo adicional",
+      "Ahorras tiempo y evitas llevarte una pieza o talla incorrecta.",
+    pricingLabel: "Consulta",
+    price: "Sin costo",
     modalities: ["En tienda", "Por WhatsApp"],
-    trust: "Atencion personalizada, sin presion de venta.",
+    trust: "La orientación está incluida con tu compra o consulta.",
     icon: MessageCircle,
-    ctaLabel: "Hablar con un asesor por WhatsApp",
+    ctaLabel: "Hablar con un asesor",
     cta: buildWhatsAppUrl(
-      "Hola JC BikerStore, quiero asesoria para elegir un producto."
+      "Hola JC BikerStore, quiero asesoría para elegir un producto."
     )
   },
   {
-    title: "Pedidos y envios",
+    title: "Pedidos y envíos",
     includes:
-      "Pedido de productos por WhatsApp o en tienda con envio a domicilio y coordinacion de entrega en todo el pais.",
+      "Tomamos tu pedido por WhatsApp y coordinamos envío donde estés.",
     forWho:
-      "Para el rider que no puede pasar por la tienda o esta fuera de Santo Domingo.",
+      "Para quien no puede pasar por la tienda o compra desde otra ciudad.",
     benefit:
-      "Recibes tu producto sin moverte: confirmamos stock, coordinamos el envio y te damos seguimiento.",
-    price: "Costo de envio segun zona",
-    modalities: ["Envios a todo el pais", "Coordinacion por WhatsApp"],
+      "Confirmas disponibilidad antes y recibes el producto sin moverte.",
+    pricingLabel: "Envío",
+    price: "Según zona",
+    modalities: ["Todo el país", "Coordinación por WhatsApp"],
     trust:
-      "Confirmamos disponibilidad antes de cobrar y coordinamos envios con seguimiento.",
+      "Confirmamos stock antes de cobrar y damos seguimiento al envío.",
     icon: Radio,
-    ctaLabel: "Hacer un pedido por WhatsApp",
+    ctaLabel: "Hacer un pedido",
     cta: buildWhatsAppUrl(
-      "Hola JC BikerStore, quiero hacer un pedido con envio."
+      "Hola JC BikerStore, quiero hacer un pedido con envío."
     )
   }
 ];
 
 export const serviceHighlights = [
-  "Venta y asesoria para riders de calle y trabajo diario.",
-  "Instalacion en tienda para salir resuelto el mismo dia.",
-  "Pedidos y envios coordinados por WhatsApp a todo el pais."
+  "Atención en tienda",
+  "Asesoría por WhatsApp",
+  "Envíos a todo el país"
 ];
 
 export const productCategories = [

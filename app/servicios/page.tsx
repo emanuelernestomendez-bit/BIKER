@@ -6,11 +6,12 @@ import { SectionHeading } from "@/components/section-heading";
 import { ServiceCard } from "@/components/service-card";
 import { buildWhatsAppUrl } from "@/lib/brand";
 import { serviceHighlights, services } from "@/lib/site";
+import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "Servicios",
   description:
-    "Servicios de JC BikerStore en Santo Domingo: accesorios, equipamiento rider, instalacion, asesoria personalizada y envios coordinados por WhatsApp."
+    "Servicios de JC BikerStore en Santo Domingo: accesorios, protección rider, instalación, asesoría personalizada y envíos coordinados por WhatsApp."
 };
 
 export default function ServicesPage() {
@@ -20,38 +21,44 @@ export default function ServicesPage() {
         <Reveal className="space-y-8">
           <SectionHeading
             eyebrow="Servicios"
-            title="Lo que hace JC BikerStore por ti y por tu moto."
-            description="Aqui no ves un listado de inventario. Ves como te ayudamos a equiparte, instalar, decidir bien y resolver tu compra en tienda o por WhatsApp."
+            title="Servicios para equiparte, instalar y comprar sin perder tiempo."
+            description="Te atendemos en tienda y por WhatsApp para ayudarte a elegir bien, resolver rápido y coordinar tu compra con claridad."
           />
-          <div className="grid gap-3 md:grid-cols-3">
+          <div className="flex flex-wrap gap-3">
             {serviceHighlights.map((highlight) => (
-              <div
+              <span
                 key={highlight}
-                className="rounded-[1.4rem] border border-white/10 bg-black/30 p-4 text-sm leading-6 text-white/68"
+                className="rounded-full border border-white/10 bg-black/30 px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-white/68"
               >
                 {highlight}
-              </div>
+              </span>
             ))}
           </div>
           <div className="flex flex-col gap-3 sm:flex-row">
             <CtaButton
               href={buildWhatsAppUrl(
-                "Hola JC BikerStore, quiero orientacion sobre sus servicios."
+                "Hola JC BikerStore, quiero orientación sobre sus servicios."
               )}
             >
               Hablar por WhatsApp
             </CtaButton>
             <CtaButton href="/catalogo" variant="ghost">
-              Ver catalogo visual
+              Ver catálogo visual
             </CtaButton>
           </div>
         </Reveal>
       </section>
 
       <section className="mx-auto max-w-7xl">
-        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-6">
           {services.map((service, index) => (
-            <Reveal key={service.title} delay={index * 70}>
+            <Reveal
+              key={service.title}
+              delay={index * 70}
+              className={cn(
+                service.featured ? "md:col-span-2 xl:col-span-3" : "xl:col-span-2"
+              )}
+            >
               <ServiceCard {...service} />
             </Reveal>
           ))}
