@@ -28,8 +28,8 @@ export default function HomePage() {
                 Atención directa.
               </h1>
               <p className="max-w-2xl text-lg leading-8 text-white/68 sm:text-xl">
-                JC BikerStore te abre la puerta a su catálogo, servicios,
-                contacto e historia sin ruido ni contenido duplicado.
+                Cascos, accesorios, repuestos y protección rider en un
+                solo punto, con atención directa desde Santo Domingo.
               </p>
             </div>
             <div className="flex flex-col gap-4 sm:flex-row">
